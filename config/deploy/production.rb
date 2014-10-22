@@ -8,7 +8,10 @@
 # role :web, %w{deploy@example.com}
 # role :db,  %w{deploy@example.com}
 
-role :web, [ENV["UPNDOWN_HOST"]]
+user = ENV["USER"]
+host = ENV["UPNDOWN_HOST"]
+
+role :web, ["#{user}@#{host}"]
 
 # Extended Server Syntax
 # ======================
