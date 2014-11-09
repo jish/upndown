@@ -42,6 +42,10 @@ namespace :deploy do
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
     end
+
+    on roles(:web), in: :sequence do
+      sudo :restart_nginx
+    end
   end
 
   after :publishing, :restart
