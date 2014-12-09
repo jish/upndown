@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "broccoli": "latest",
+    "broccoli-clean-css": "latest",
+    "broccoli-concat": "latest"
+  },
+  "private": true
+}
