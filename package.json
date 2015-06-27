@@ -1,5 +1,6 @@
 {
   "name": "theupndown",
+  "version": "0.0.1",
   "devDependencies": {
     "broccoli": "latest",
     "broccoli-clean-css": "latest",
