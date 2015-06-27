@@ -12,7 +12,7 @@ namespace :web do
     on roles(:web) do
       within release_path do
         execute :npm, "install"
-        execute :broccoli, "build", "dist"
+        execute "node_modules/broccoli-cli/bin/broccoli", "build", "dist"
       end
     end
   end

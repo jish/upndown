@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "devDependencies": {
     "broccoli": "latest",
+    "broccoli-cli": "latest",
     "broccoli-clean-css": "latest",
     "broccoli-concat": "latest",
     "broccoli-funnel": "latest",
