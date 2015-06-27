@@ -1,8 +1,11 @@
 {
+  "name": "theupndown",
   "devDependencies": {
     "broccoli": "latest",
     "broccoli-clean-css": "latest",
-    "broccoli-concat": "latest"
+    "broccoli-concat": "latest",
+    "broccoli-funnel": "latest",
+    "broccoli-merge-trees": "latest"
   },
   "private": true
 }

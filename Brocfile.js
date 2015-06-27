@@ -1,10 +1,20 @@
-var cleanCss = require('broccoli-clean-css')
-var concat = require('broccoli-concat')
+var CleanCss = require('broccoli-clean-css')
+var Concat = require('broccoli-concat')
+var Funnel = require('broccoli-funnel')
+var MergeTrees = require('broccoli-merge-trees')
 
-var tree = cleanCss('public/css')
-tree = concat(tree, {
-  inputFiles: ['reset.css', 'master.css'],
+var compressedCss = new CleanCss('public/css')
+var applicationCss = new Concat(compressedCss, {
+  inputFiles: ['*.css'],
   outputFile: '/css/app.css'
 })
 
-module.exports = tree
+var images = new Funnel('public/images', {
+  destDir: 'images'
+})
+
+var html = new Funnel('public', {
+  include: ['*.html']
+})
+
+module.exports = new MergeTrees([applicationCss, images, html])
