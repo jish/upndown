@@ -6,4 +6,14 @@ namespace :web do
       puts "#{host.hostname} has been up for: #{uptime}"
     end
   end
+
+  desc "Build"
+  task :build do
+    on roles(:web) do
+      within release_path do
+        execute :npm, "install"
+        execute :broccoli, "build", "dist"
+      end
+    end
+  end
 end

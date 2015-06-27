@@ -48,6 +48,7 @@ namespace :deploy do
     end
   end
 
+  before :publishing, "web:build"
   after :publishing, :restart
 
   after :restart, :clear_cache do
