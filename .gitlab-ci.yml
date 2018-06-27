@@ -1,0 +1,14 @@
+image: node:10.5.0
+
+before_script:
+  - npm install
+
+pages:
+  stage: deploy
+  script:
+  - npm run build
+  artifacts:
+    paths:
+    - dist
+  only:
+  - master
