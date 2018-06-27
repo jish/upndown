@@ -6,9 +6,9 @@ before_script:
 pages:
   stage: deploy
   script:
-  - npm run build
+  - npm run build public
   artifacts:
     paths:
-    - dist
+    - public
   only:
   - master

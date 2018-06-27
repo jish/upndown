@@ -12,7 +12,7 @@ namespace :web do
     on roles(:web) do
       within release_path do
         execute :npm, "install"
-        execute :npm, "run", "build"
+        execute :npm, "run", "build", "dist"
       end
     end
   end

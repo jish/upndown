@@ -3,17 +3,17 @@ var Concat = require('broccoli-concat')
 var Funnel = require('broccoli-funnel')
 var MergeTrees = require('broccoli-merge-trees')
 
-var compressedCss = new CleanCss('public/css')
+var compressedCss = new CleanCss('app/css')
 var applicationCss = new Concat(compressedCss, {
   inputFiles: ['*.css'],
   outputFile: '/css/app.css'
 })
 
-var images = new Funnel('public/images', {
+var images = new Funnel('app/images', {
   destDir: 'images'
 })
 
-var html = new Funnel('public', {
+var html = new Funnel('app', {
   include: ['*.html']
 })
 
