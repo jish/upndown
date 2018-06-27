@@ -1,5 +1,8 @@
 {
   "name": "theupndown",
+  "scripts": {
+    "build": "broccoli build dist"
+  },
   "version": "0.0.1",
   "devDependencies": {
     "broccoli": "latest",
