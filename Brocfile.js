@@ -5,6 +5,7 @@ var MergeTrees = require('broccoli-merge-trees')
 
 var compressedCss = new CleanCss('app/css')
 var applicationCss = new Concat(compressedCss, {
+  headerFiles: ['reset.css'],
   inputFiles: ['*.css'],
   outputFile: '/css/app.css'
 })
