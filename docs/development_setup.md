@@ -1,7 +1,12 @@
 ## Development Setup
 
-1. Install npm
-2. Run `npm install`
+Install NPM. Use NPM to install dependencies:
+
+    $ npm i
+
+### Development Server
+
+    $ ./script/server
 
 ### Build
 
